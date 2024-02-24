@@ -24,7 +24,7 @@ test-frontend: ## Run frontend tests
 
 .PHONY: test-backend
 test-backend: ## Run backend tests
-	$Q $(go) test -v ./...
+	$Q $(go) test -v ./... -coverprofile=coverage.out
 
 .PHONY: lint
 lint: lint-frontend lint-backend lint-commits ## Run all linters
