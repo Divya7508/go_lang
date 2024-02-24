@@ -12,6 +12,8 @@
     "lint": "eslint --ext .vue,.js src/",
     "lint:fix": "eslint --ext .vue,.js --fix src/",
     "format": "prettier --write ."
+    "test": "jest",
+    "test:coverage": "jest --coverage"
   },
   "dependencies": {
     "ace-builds": "^1.23.4",
@@ -48,6 +50,9 @@
     "eslint": "^8.46.0",
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-vue": "^9.16.1",
+    "jest": "^27.0.0",
+    "@vitejs/plugin-vue-jest": "^1.0.0",
+    "babel-jest": "^27.0.0",
     "jsdom": "^22.1.0",
     "postcss": "^8.4.31",
     "prettier": "^3.0.1",
