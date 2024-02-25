@@ -84,7 +84,6 @@ export async function signup(username, password) {
 
 export function logout() {
   document.cookie = "auth=; expires=Thu, 01 Jan 1970 00:00:01 GMT; path=/";
-
   store.commit("setJWT", "");
   store.commit("setUser", null);
   localStorage.setItem("jwt", null);
