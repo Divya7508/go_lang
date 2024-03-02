@@ -14,6 +14,7 @@ VOLUME /srv
 EXPOSE 80
 
 COPY docker_config.json /.filebrowser.json
-COPY filebrowser /filebrowser
+// COPY filebrowser /filebrowser
+COPY /home/ubuntu/go_lang/docker/root/etc/services.d/filebrowser /filebrowser
 
 ENTRYPOINT [ "/filebrowser" ]
