@@ -54,9 +54,10 @@ pipeline {
  stage('Run Docker Container') {
             steps {
                 script {
-            def dockerContainer = docker.image("${IMAGE_NAME}:${IMAGE_TAG}").withRun("-p 8080:80 --name ${CONTAINER_NAME}")
+            def dockerContainer = docker.image("${IMAGE_NAME}:${IMAGE_TAG}").run("-p 8080:80 --name ${CONTAINER_NAME}")
         }
     }
 }
 }
 }
+
