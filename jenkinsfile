@@ -6,7 +6,7 @@ pipeline {
         DOCKERFILE = './Dockerfile'
         IMAGE_NAME = 'container548/go_lang'
         IMAGE_TAG = 'latest'
-        REGISTRY_CREDS = 'docker_devopsitdefined'
+        REGISTRY_CREDS = 'devopsitdefined'
     }
     stages{
         stage('Checkout') {
