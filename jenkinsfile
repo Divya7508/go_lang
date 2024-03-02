@@ -29,14 +29,6 @@ pipeline {
         //     }
         // }
 
-       // stage('Testing') {
-         //   steps {
-           //     sh '''
-             //       make clean test-backend
-               // '''
-            //}
-        //}
-
         stage('Code Analisys') {
             steps {
                 script {
@@ -46,14 +38,6 @@ pipeline {
                 }
             }
         }
-
-       // stage('Build App') {
-         //   steps {
-           //     sh '''
-             //       make clean build
-               // '''
-           // }
-        //}
 
         stage('Build Image') {
             steps {
