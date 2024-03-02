@@ -7,6 +7,8 @@ pipeline {
         IMAGE_NAME = 'container548/go_lang'
         IMAGE_TAG = 'latest'
         REGISTRY_CREDS = 'devopsitdefined'
+        CONTAINER_NAME = 'filebrowser'
+
     }
     stages{
         stage('Checkout') {
@@ -45,15 +47,14 @@ pipeline {
                     buildImage = docker.build("${env.IMAGE_NAME}:${env.BUILD_ID}", "-f ${env.DOCKERFILE} .")
                     docker.withRegistry('',"${env.REGISTRY_CREDS}") {
                         buildImage.push()
-                    }
+                  }
                 }
             }
         }
  stage('Run Docker Container') {
             steps {
                 script {
-                            sh "docker run -p 8080:80 --name containerfile filebrowser"
-            }
+            def dockerContainer = docker.image("${IMAGE_NAME}:${IMAGE_TAG}").withRun("-p 8080:80 --name ${CONTAINER_NAME}")
         }
     }
 }
