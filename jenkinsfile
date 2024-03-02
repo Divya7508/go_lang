@@ -47,13 +47,13 @@ pipeline {
             }
         }
 
-        stage('Build App') {
-            steps {
-                sh '''
-                    make clean build
-                '''
-            }
-        }
+       // stage('Build App') {
+         //   steps {
+           //     sh '''
+             //       make clean build
+               // '''
+           // }
+        //}
 
         stage('Build Image') {
             steps {
