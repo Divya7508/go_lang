@@ -4,7 +4,7 @@ pipeline {
     environment {
         SONARQUBE_SCANNER_TOOL = tool 'sonar_scanner';
         DOCKERFILE = './Dockerfile'
-        IMAGE_NAME = 'go_lang'
+        IMAGE_NAME = 'container548/go_lang'
         IMAGE_TAG = 'latest'
         REGISTRY_CREDS = 'devopsitdefined'
         CONTAINER_NAME = 'filebrowser'
